@@ -1,0 +1,15 @@
+def nearby_az(string)
+    letters = string.split("")
+    
+    letters.each do |i|
+      if i == "a"
+        for i2 in 0..3
+          if i2 == "z"
+              return true
+          else 
+              return false
+          end
+        end
+      end
+    end
+end
