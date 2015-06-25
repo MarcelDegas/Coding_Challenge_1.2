@@ -1,15 +1,17 @@
-def nearby_az(string)
-    letters = string.split("")
-    
-    letters.each do |i|
-      if i == "a"
-        for i2 in 0..3
-          if i2 == "z"
-              return true
-          else 
-              return false
-          end
-        end
-      end
-    end
+def nearby_az(var2)
+target_index = var2.index("a")
+if target_index.nil?
+  put "there no a!"
+else 
+target_string = var2.slice(target_index...(target_index + 3))
+puts target_string.include?("z") 
+end 
 end
+
+
+puts('nearby_az("baz") == true: ' + (nearby_az('baz') == true).to_s)
+puts('nearby_az("abz") == true: ' + (nearby_az('abz') == true).to_s)
+puts('nearby_az("abcz") == true: ' + (nearby_az('abcz') == true).to_s)
+puts('nearby_az("a") == false: ' + (nearby_az('a') == false).to_s)
+puts('nearby_az("z") == false: ' + (nearby_az('z') == false).to_s)
+puts('nearby_az("za") == false: ' + (nearby_az('za') == false).to_s)
