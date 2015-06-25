@@ -1,0 +1,17 @@
+def two_sum(num)
+	ret = nil
+	num.each_with_index do |number_a, index1|
+      zero_sum = num.index {|number_b| number_a + number_b == 0}
+	if zero_sum
+	  ret = [index1, index2]
+	end 
+	end
+end
+
+
+puts(
+  'two_sum([1, 3, 5, -3]) == [1, 3]: ' + (two_sum([1, 3, 5, -3]) == [1, 3]).to_s
+)
+puts(
+  'two_sum([1, 3, 5]) == nil: ' + (two_sum([1, 3, 5]) == nil).to_s
+)
